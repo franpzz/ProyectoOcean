@@ -34,7 +34,10 @@ body {
     text-align: center;
     font-size: 6rem;
     border-bottom: 1px solid rgba(0, 0 , 0, 0.2);
-}
+    background: linear-gradient(to right, #bf5d08, #040885 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
 
 .item-title {
     font-family: 'Exo 2', sans-serif;
@@ -43,10 +46,36 @@ body {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 600px;) {
+    .item-img {
+        width: 75%; 
+    }
+    .item-img:hover {
+        transform: scale(1.05);
+    }
+}
+
 .item-img {
     transition: 1s all;
 }
 
 .item-img:hover {
     transform: scale(1.2); 
+}
+
+footer {
+    background-color: #f5f4dc;
+}
+
+footer .mapa-footer {
+    width: 75%; 
+}
+
+.footer-contact {
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+.iconos {
+    font-size: 5rem;
 }
