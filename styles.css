@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    font-size: 62.5%;
+}
+/*
+body {
+    background-image: url('assets/fondo-home.jpg');
+}
+*/
+.navbar-items {
+    width: 30%;
+    margin-right: 5%;
+}
+
+.navbar-items a {
+    font-size: 2.2rem;
+    color: gray; 
+}
+
+.navbar-items a:hover {
+    color: black;
+}
+
+.brand-margin {
+    margin-left: 50px;
+}
+
+.section-title {
+    font-family: 'Parisienne', cursive;
+    text-align: center;
+    font-size: 6rem;
+    border-bottom: 1px solid rgba(0, 0 , 0, 0.2);
+}
+
+.item-title {
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item-img {
+    transition: 1s all;
+}
+
+.item-img:hover {
+    transform: scale(1.2); 
+}
