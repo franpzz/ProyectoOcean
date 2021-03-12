@@ -63,6 +63,14 @@ body {
     transform: scale(1.2); 
 }
 
+.item-price {
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    color: gray; 
+    font-size: 1.5rem;
+}
+
 footer {
     background-color: #f5f4dc;
 }
@@ -78,4 +86,9 @@ footer .mapa-footer {
 
 .iconos {
     font-size: 5rem;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: black; 
 }
