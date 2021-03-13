@@ -24,6 +24,10 @@ body {
     margin-left: 50px;
 }
 
+.pad-carousel {
+    padding: 0; 
+}
+
 .section-title {
     font-family: 'Parisienne', cursive;
     text-align: center;
