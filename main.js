@@ -56,7 +56,10 @@ function compraShort () {
     alert('A continuación verá los productos por su nombre y precio.')
     alert(short1.nombre.toUpperCase() + ': ' + '$' + short1.precio + '\n' + short2.nombre.toUpperCase() + ': ' + '$' + short2.precio + '\n' + short3.nombre.toUpperCase() + ': ' + '$' + short3.precio + '\n' + short4.nombre.toUpperCase() + ': ' + '$' + short4.precio + '\n' );
     let quiereShort = prompt('Quiere alguno de estos?').toLowerCase();
-    let precioShortTotal = 0;  
+    let precioShortTotal = 0;
+    if (quiereShort != 'si' && quiereShort != 'no'){
+        quiereShort = prompt('Por favor, ingrese si o no');
+    }   
     while (quiereShort == 'si') {
         let cualShort = prompt('Cual short desea comprar? Ingrese el nombre del producto').toLowerCase();
         if (!baseShorts.find(f => f.nombre == cualShort)) {
@@ -82,6 +85,9 @@ function compraRemera () {
     alert(remera1.nombre.toUpperCase() + ': ' + '$' + remera1.precio + '\n' + remera2.nombre.toUpperCase() + ': ' + '$' + remera2.precio + '\n' + remera3.nombre.toUpperCase() + ': ' + '$' + remera3.precio + '\n' + remera4.nombre.toUpperCase() + ': ' + '$' + remera4.precio + '\n' );
     let quiereRemera = prompt('Quiere alguna de estas?').toLowerCase(); 
     let precioRemeraTotal = 0; 
+    if (quiereRemera != 'si' && quiereRemera != 'no'){
+        quiereRemera = prompt('Por favor, ingrese si o no');
+    } 
     while (quiereRemera == 'si') {
         let cualRemera = prompt('Cuál remera quiere comprar? Ingrese el nombre del producto').toLowerCase();
         if (!baseRemeras.find(r => r.nombre == cualRemera)) {
@@ -106,7 +112,10 @@ function compraCamisa () {
     alert('A continuación verá los productos por su nombre y precio.')
     alert(camisa1.nombre.toUpperCase() + ': ' + '$' + camisa1.precio + '\n' + camisa2.nombre.toUpperCase() + ': ' + '$' + camisa2.precio + '\n' + camisa3.nombre.toUpperCase() + ': ' + '$' + camisa3.precio + '\n' + camisa4.nombre.toUpperCase() + ': ' + '$' + camisa4.precio + '\n' + camisa5.nombre.toUpperCase() + ': ' + '$' + camisa5.precio + '\n' + camisa6.nombre.toUpperCase() + ': ' + '$' + camisa6.precio + '\n' + camisa7.nombre.toUpperCase() + ': ' + '$' + camisa7.precio + '\n' + camisa8.nombre.toUpperCase() + ': ' + '$' + camisa8.precio);
     let quiereCamisa = prompt('Quiere alguna de estas?').toLowerCase(); 
-    let precioCamisaTotal = 0; 
+    let precioCamisaTotal = 0;
+    if (quiereCamisa != 'si' && quiereCamisa != 'no'){
+        quiereCamisa = prompt('Por favor, ingrese si o no');
+    } 
     while (quiereCamisa == 'si') {
         let cualCamisa = prompt('Cual camisa quiere comprar? Ingrese el nombre del producto').toLowerCase(); 
         if (!baseCamisas.find(c => c.nombre == cualCamisa)) {
@@ -120,8 +129,8 @@ function compraCamisa () {
                 precioCamisaTotal = precioCamisaTotal + (laCamisa.precio * cuantasCamisas); 
                 alert('Son $' + precioCamisaTotal); 
                 laCamisa.venta(cuantasCamisas);  
-            }
-            quiereCamisa = prompt('Quiere comprar otra camisa?');
+        }
+        quiereCamisa = prompt('Quiere comprar otra camisa?');
         }   
     }
     return precioCamisaTotal; 
