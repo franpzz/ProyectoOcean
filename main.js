@@ -64,8 +64,13 @@ function compraShort () {
         } else {
             let elShort = baseShorts.find(f => f.nombre == cualShort);
             let cuantosShorts = parseInt(prompt('Cuántos quiere comprar?'));
-            precioShortTotal = precioShortTotal + (elShort.precio * cuantosShorts);
-            alert('Son $' + precioShortTotal);
+            if (cuantosShorts > elShort.stock) {
+                alert('No tenemos esa cantidad, solo tenemos ' + elShort.stock + ' unidades');
+            } else {
+                precioShortTotal = precioShortTotal + (elShort.precio * cuantosShorts);
+                alert('Son $' + precioShortTotal);
+                elShort.venta(cuantasCamisas);
+            }
             quiereShort = prompt('Quiere comprar otro short?');
         }
     }
@@ -83,9 +88,14 @@ function compraRemera () {
             quiereRemera = prompt('Esa no la tenemos, querés otra?');
         } else {
             let laRemera = baseRemeras.find(r => r.nombre == cualRemera); 
-            let cuantasRemeras = parseInt(prompt('Cuántas quiere comprar?')); 
-            precioRemeraTotal = precioRemeraTotal + (laRemera.precio * cuantasRemeras); 
-            alert('Son $' + precioRemeraTotal); 
+            let cuantasRemeras = parseInt(prompt('Cuántas quiere comprar?'));
+            if (cuantasRemeras > laRemera.stock) {
+                alert('No tenemos esa cantidad, solo tenemos ' + laRemera.stock + ' unidades');
+            } else {
+                precioRemeraTotal = precioRemeraTotal + (laRemera.precio * cuantasRemeras); 
+                alert('Son $' + precioRemeraTotal); 
+                laRemera.venta(cuantasCamisas);
+            }
             quiereRemera = prompt('Quiere comprar otra remera?'); 
         }
     }
@@ -104,9 +114,14 @@ function compraCamisa () {
         } else {
             let laCamisa = baseCamisas.find(c => c.nombre == cualCamisa); 
             let cuantasCamisas = parseInt(prompt('Cuántas quiere comprar?')); 
-            precioCamisaTotal = precioCamisaTotal + (laCamisa.precio * cuantasCamisas); 
-            alert('Son $' + precioCamisaTotal); 
-            quiereCamisa = prompt('Quiere comprar otra camisa?'); 
+            if (cuantasCamisas > laCamisa.stock) {
+                alert('No tenemos esa cantidad, solo tenemos ' + laCamisa.stock + ' unidades'); 
+            } else {
+                precioCamisaTotal = precioCamisaTotal + (laCamisa.precio * cuantasCamisas); 
+                alert('Son $' + precioCamisaTotal); 
+                laCamisa.venta(cuantasCamisas);  
+            }
+            quiereCamisa = prompt('Quiere comprar otra camisa?');
         }   
     }
     return precioCamisaTotal; 
