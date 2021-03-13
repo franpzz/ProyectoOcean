@@ -56,7 +56,7 @@ function compraShort () {
     alert('A continuación verá los productos por su nombre y precio.')
     alert(short1.nombre.toUpperCase() + ': ' + '$' + short1.precio + '\n' + short2.nombre.toUpperCase() + ': ' + '$' + short2.precio + '\n' + short3.nombre.toUpperCase() + ': ' + '$' + short3.precio + '\n' + short4.nombre.toUpperCase() + ': ' + '$' + short4.precio + '\n' );
     let quiereShort = prompt('Quiere alguno de estos?').toLowerCase();
-    let precioShortTotal = 0;
+    let precioShortTotal = 0; 
     if (quiereShort != 'si' && quiereShort != 'no'){
         quiereShort = prompt('Por favor, ingrese si o no');
     }   
@@ -72,7 +72,7 @@ function compraShort () {
             } else {
                 precioShortTotal = precioShortTotal + (elShort.precio * cuantosShorts);
                 alert('Son $' + precioShortTotal);
-                elShort.venta(cuantasCamisas);
+                elShort.venta(cuantosShorts);
             }
             quiereShort = prompt('Quiere comprar otro short?');
         }
@@ -100,7 +100,7 @@ function compraRemera () {
             } else {
                 precioRemeraTotal = precioRemeraTotal + (laRemera.precio * cuantasRemeras); 
                 alert('Son $' + precioRemeraTotal); 
-                laRemera.venta(cuantasCamisas);
+                laRemera.venta(cuantasRemeras);
             }
             quiereRemera = prompt('Quiere comprar otra remera?'); 
         }
@@ -137,7 +137,10 @@ function compraCamisa () {
 }
 
 let quiereComprar = prompt('Quiere realizar alguna compra?').toLowerCase(); 
-let valorCompra = 0; 
+let valorCompra = 0;
+let shortsComprados = [];
+let remerasCompradas = [];
+let camisasCompradas = [];  
 while (quiereComprar == 'si') {
     let productoDeseado = prompt('Quiere short, camisa o remera?').toLowerCase(); 
     switch(productoDeseado) {
@@ -157,6 +160,6 @@ while (quiereComprar == 'si') {
             alert('No tenemos ese producto'); 
             break;  
     }
-    alert('El valor de su compra es de $' + valorCompra); 
+    alert('El valor de su compra es de $' + valorCompra);
     quiereComprar = prompt('Quiere seguir comprando?'); 
 }
