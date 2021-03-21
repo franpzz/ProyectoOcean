@@ -91,3 +91,13 @@ footer .mapa-footer {
     text-decoration: none;
     color: black; 
 }
+
+.muestraCompra {
+    background-color: aquamarine;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+}
+
+.muestraCompra h3 {
+    font-size: 3rem;
+}
