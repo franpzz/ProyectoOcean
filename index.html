@@ -30,7 +30,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <div class="container-fluid pad-carousel">
           <div id="carouselFront" class="carousel slide carouselFront" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -59,28 +59,44 @@
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Blue Tribu</div>
                     <img class="item-img" src="assets/blue_tribu.jpg" alt="Camisa Blue Tribu">
-                    <div class="item-price">$2100</div>
+                    <div id="btribu-price" class="item-price">$2100</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-btribu" type="number" min="1" max="5">
+                      <button id="btn-btribu" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Blue Marley</div>
                     <img class="item-img" src="assets/blue_marley.jpg" alt="Camisa Blue Marley">
-                    <div class="item-price">$2500</div>
+                    <div id="bmarley-price" class="item-price">$2500</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-bmarley" type="number" min="1" max="5">
+                      <button id="btn-bmarley" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Yellow Submarine</div>
                     <img class="item-img" src="assets/yellow_submarine.jpg" alt="Camisa Yellow Submarine">
-                    <div class="item-price">$1950</div>
+                    <div id="ysubmarine-price" class="item-price">$1950</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-ysubmarine" type="number" min="1" max="5">
+                      <button id="btn-ysubmarine" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Dylan</div>
                     <img class="item-img" src="assets/dylan.jpg" alt="Camisa Dylan">
-                    <div class="item-price">$2225</div>
+                    <div id="dylan-price" class="item-price">$2225</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-dylan" type="number" min="1" max="5">
+                      <button id="btn-dylan" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -89,28 +105,44 @@
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Malibu</div>
                     <img class="item-img" src="assets/malibu.jpg" alt="Camisa Malibu">
-                    <div class="item-price">$2675</div>
+                    <div id="malibu-price" class="item-price">$2675</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-malibu" type="number" min="1" max="5">
+                      <button id="btn-malibu" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Milo</div>
                     <img class="item-img" src="assets/milo.jpg" alt="Camisa Milo">
-                    <div class="item-price">$2250</div>
+                    <div id="milo-price" class="item-price">$2250</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-milo" type="number" min="1" max="5">
+                      <button id="btn-milo" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa New Hans</div>
                     <img class="item-img" src="assets/new_hans.jpg" alt="Camisa New Hans">
-                    <div class="item-price">$2700</div>
+                    <div id="nhans-price" class="item-price">$2700</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-nhans" type="number" min="1" max="5">
+                      <button id="btn-nhans" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
                     <div class="item-title">Camisa Red Maui</div>
                     <img class="item-img" src="assets/red_maui.jpg" alt="Camisa Red Maui">
-                    <div class="item-price">$2340</div>
+                    <div id="rmaui-price" class="item-price">$2340</div>
+                    <div class="d-flex justify-content-between">
+                      <input id="cant-rmaui" type="number" min="1" max="5">
+                      <button id="btn-rmaui" class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -124,28 +156,44 @@
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Remera Koi</div>
                   <img class="item-img" src="assets/koi.jpg" alt="Remera Koi">
-                  <div class="item-price">$1750</div>
+                  <div id="koi-price" class="item-price">$1750</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-koi" type="number" min="1" max="5">
+                    <button id="btn-koi" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Remera lisa Mostaza</div>
                   <img class="item-img" src="assets/lisa_mostaza.jpg" alt="Remera lisa Mostaza">
-                  <div class="item-price">$1600</div>
+                  <div id="mostaza-price" class="item-price">$1600</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-mostaza" type="number" min="1" max="5">
+                    <button id="btn-mostaza" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Remera lisa Bordo</div>
                   <img class="item-img" src="assets/lisa_bordo.jpg" alt="Remera lisa Bordo">
-                  <div class="item-price">$1600</div>
+                  <div id="bordo-price" class="item-price">$1600</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-bordo" type="number" min="1" max="5">
+                    <button id="btn-bordo" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Remera lisa Verde Agua</div>
                   <img class="item-img" src="assets/lisa_verde_agua.jpg" alt="Remera lisa Verde Agua">
-                  <div class="item-price">$1600</div>
+                  <div id="verdeagua-price" class="item-price">$1600</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-verdeagua" type="number" min="1" max="5">
+                    <button id="btn-verdeagua" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,50 +207,66 @@
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Short de baño Hans</div>
                   <img class="item-img" src="assets/short_hans.jpg" alt="Short de baño Hans">
-                  <div class="item-price">$2150</div>
+                  <div id="hans-price" class="item-price">$2150</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-hans" type="number" min="1" max="5">
+                    <button id="btn-hans" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Short de baño Jail</div>
                   <img class="item-img" src="assets/short_jail.jpg" alt="Short de baño Jail">
-                  <div class="item-price">$2200</div>
+                  <div id="jail-price" class="item-price">$2200</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-jail" type="number" min="1" max="5">
+                    <button id="btn-jail" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Short de baño Pierre</div>
                   <img class="item-img" src="assets/short_pierre.jpg" alt="Short de baño Pierre">
-                  <div class="item-price">$2000</div>
+                  <div id="pierre-price" class="item-price">$2000</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-pierre" type="number" min="1" max="5">
+                    <button id="btn-pierre" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-3 col-sm-12">
                 <div class="item-card d-flex flex-column align-items-center">
                   <div class="item-title">Short de baño Rick</div>
                   <img class="item-img" src="assets/short_rick.jpg" alt="Short de baño Rick">
-                  <div class="item-price">$2350</div>
+                  <div id="rick-price" class="item-price">$2350</div>
+                  <div class="d-flex justify-content-between">
+                    <input id="cant-rick" type="number" min="1" max="5">
+                    <button id="btn-rick" class="btn btn-primary">Agregar al carrito</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
     </main>
-    <footer class="mt-2">
+    <footer>
       <div class="container-fluid">
         <div class="row mt-5 pb-5 pt-3 d-flex justify-content-between">
           <div class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-center flex-column">
             <div class="footer-contact">¿Querés contactarnos?</div>
             <div class="w-75">
-              <form action="GET">
+              <form id="formulario">
                 <div class="mb-3">
                   <label class="d-none form-label" for="email">Email</label>
                   <input class="form-control" id="email" type="email" placeholder="Tu email">
                 </div>
                 <div class="mb-3">
-                  <label for="mensaje" class="form-label d-none">Example textarea</label>
+                  <label for="mensaje" class="form-label d-none">Mensaje</label>
                   <textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
                 </div>
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                <input type="submit" id="form-submit" class="btn btn-primary" value="Enviar">
               </form>
             </div>
           </div>

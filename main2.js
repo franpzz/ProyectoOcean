@@ -1,212 +1,254 @@
-class Productos {
-    constructor(nombre, prenda, precio, id, stock) {
-        this.nombre = nombre, 
-        this.prenda = prenda,
-        this.precio = precio, 
-        this.id = id
-        this.stock = stock
+let btnBtribu = document.getElementById('btn-btribu');
+let btnBmarley = document.getElementById('btn-bmarley');
+let btnYsubmarine = document.getElementById('btn-ysubmarine');
+let btnDylan = document.getElementById('btn-dylan');
+let btnMalibu = document.getElementById('btn-malibu');
+let btnMilo = document.getElementById('btn-milo');
+let btnNhans = document.getElementById('btn-nhans');
+let btnRmaui = document.getElementById('btn-rmaui');
+let btnKoi = document.getElementById('btn-koi');
+let btnMostaza = document.getElementById('btn-mostaza');
+let btnBordo = document.getElementById('btn-bordo');
+let btnVerdeagua = document.getElementById('btn-verdeagua');
+let btnHans = document.getElementById('btn-hans');
+let btnJail = document.getElementById('btn-jail');
+let btnPierre = document.getElementById('btn-pierre');
+let btnRick = document.getElementById('btn-rick');
+
+let d = /\d+/;
+let compraTotal = 0;
+let muestraCompra = document.createElement('div');
+document.getElementById('main').appendChild(muestraCompra);
+muestraCompra.className = 'muestraCompra mt-4'
+btnBtribu.addEventListener('click', respuestaBtribu);
+function respuestaBtribu () {
+    let cantidad = parseInt(document.getElementById('cant-btribu').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('btribu-price').textContent;
+        let precioBtribu = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioBtribu * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
     }
-    venta(cantidadVenta) {
-        this.stock = this.stock - cantidadVenta; 
+};
+
+btnBmarley.addEventListener('click', respuestaBmarley);
+function respuestaBmarley () {
+    let cantidad = parseInt(document.getElementById('cant-bmarley').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('bmarley-price').textContent;
+        let precioBmarley = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioBmarley * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
     }
+};
+
+btnYsubmarine.addEventListener('click', respuestaYsubmarine);
+function respuestaYsubmarine () {
+    let cantidad = parseInt(document.getElementById('cant-ysubmarine').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('ysubmarine-price').textContent;
+        let precioYsubmarine = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioYsubmarine * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnDylan.addEventListener('click', respuestaDylan);
+function respuestaDylan () {
+    let cantidad = parseInt(document.getElementById('cant-dylan').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('dylan-price').textContent;
+        let precioDylan = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioDylan * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnMalibu.addEventListener('click', respuestaMalibu);
+function respuestaMalibu () {
+    let cantidad = parseInt(document.getElementById('cant-malibu').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('malibu-price').textContent;
+        let precioMalibu = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioMalibu * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnMilo.addEventListener('click', respuestaMilo);
+function respuestaMilo () {
+    let cantidad = parseInt(document.getElementById('cant-milo').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('milo-price').textContent;
+        let precioMilo = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioMilo * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnNhans.addEventListener('click', respuestaNhans);
+function respuestaNhans () {
+    let cantidad = parseInt(document.getElementById('cant-nhans').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('nhans-price').textContent;
+        let precioNhans = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioNhans * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnRmaui.addEventListener('click', respuestaRmaui);
+function respuestaRmaui () {
+    let cantidad = parseInt(document.getElementById('cant-rmaui').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('rmaui-price').textContent;
+        let precioRmaui = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioRmaui * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnKoi.addEventListener('click', respuestaKoi);
+function respuestaKoi () {
+    let cantidad = parseInt(document.getElementById('cant-koi').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('koi-price').textContent;
+        let precioKoi = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioKoi * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnMostaza.addEventListener('click', respuestaMostaza);
+function respuestaMostaza () {
+    let cantidad = parseInt(document.getElementById('cant-mostaza').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('mostaza-price').textContent;
+        let precioMostaza = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioMostaza * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnBordo.addEventListener('click', respuestaBordo);
+function respuestaBordo () {
+    let cantidad = parseInt(document.getElementById('cant-bordo').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('bordo-price').textContent;
+        let precioBordo = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioBordo * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnVerdeagua.addEventListener('click', respuestaVerdeagua);
+function respuestaVerdeagua () {
+    let cantidad = parseInt(document.getElementById('cant-verdeagua').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('verdeagua-price').textContent;
+        let precioVerdeagua = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioVerdeagua * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnHans.addEventListener('click', respuestaHans);
+function respuestaHans () {
+    let cantidad = parseInt(document.getElementById('cant-hans').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('hans-price').textContent;
+        let precioHans = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioHans * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnJail.addEventListener('click', respuestaJail);
+function respuestaJail () {
+    let cantidad = parseInt(document.getElementById('cant-jail').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('jail-price').textContent;
+        let precioJail = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioJail * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnPierre.addEventListener('click', respuestaPierre);
+function respuestaPierre () {
+    let cantidad = parseInt(document.getElementById('cant-pierre').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('pierre-price').textContent;
+        let precioPierre = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioPierre * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+btnRick.addEventListener('click', respuestaRick);
+function respuestaRick () {
+    let cantidad = parseInt(document.getElementById('cant-rick').value);
+    if (cantidad >= 1) {
+        let precio = document.getElementById('rick-price').textContent;
+        let precioRick = parseInt(precio.match(d));
+        compraTotal = compraTotal + (precioRick * cantidad);
+        console.log(compraTotal);
+        muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
+    } else {
+        alert('Debes seleccionar la cantidad');
+    }
+};
+
+let formulario = document.getElementById('formulario');
+formulario.addEventListener('submit', capturarDatos);
+function capturarDatos (e) {
+    e.preventDefault();
+    let datos = e.target;
+    console.log(`${datos.children[0].children[0].textContent}: ${datos.children[0].children[1].value}`)
+    console.log(`${datos.children[1].children[0].textContent}: ${datos.children[1].children[1].value}`);
 }
-
-let camisa1 = new Productos('btribu', 'camisa', 2100, 1, 25); 
-let camisa2 = new Productos('bmarley', 'camisa', 2500, 2, 30);
-let camisa3 = new Productos('ysubmarine', 'camisa', 1950, 3, 25);
-let camisa4 = new Productos('dylan', 'camisa', 2225, 4, 2); 
-let camisa5 = new Productos('malibu', 'camisa', 2675, 5, 10);
-let camisa6 = new Productos('milo', 'camisa', 2250, 6, 5); 
-let camisa7 = new Productos('nhans', 'camisa', 2700, 7, 4); 
-let camisa8 = new Productos('rmaui', 'camisa', 2340, 8, 36);
-
-baseCamisas = []; 
-baseCamisas.push(camisa1);
-baseCamisas.push(camisa2); 
-baseCamisas.push(camisa3); 
-baseCamisas.push(camisa4); 
-baseCamisas.push(camisa5); 
-baseCamisas.push(camisa6); 
-baseCamisas.push(camisa7); 
-baseCamisas.push(camisa8); 
-
-let remera1 = new Productos('koi', 'remera', 1750, 1, 10); 
-let remera2 = new Productos('mostaza', 'remera', 1600, 2, 2);
-let remera3 = new Productos('bordo', 'remera', 1600, 3, 30); 
-let remera4 = new Productos('verdeagua', 'remera', 1600, 4, 10); 
-
-baseRemeras = []; 
-baseRemeras.push(remera1);
-baseRemeras.push(remera2);
-baseRemeras.push(remera3);
-baseRemeras.push(remera4);
-
-let short1 = new Productos('harris', 'short', 2150, 1, 22);
-let short2 = new Productos('jail', 'short', 2200, 2, 17); 
-let short3 = new Productos('pierre', 'short', 2000, 3, 11); 
-let short4 = new Productos('rick', 'short', 2350, 4, 3);  
-
-baseShorts = []; 
-baseShorts.push(short1);
-baseShorts.push(short2);
-baseShorts.push(short3);
-baseShorts.push(short4);
-
-function compraShort () {
-    alert('A continuación verá los productos por su nombre y precio.')
-    alert(short1.nombre.toUpperCase() + ': ' + '$' + short1.precio + '\n' + short2.nombre.toUpperCase() + ': ' + '$' + short2.precio + '\n' + short3.nombre.toUpperCase() + ': ' + '$' + short3.precio + '\n' + short4.nombre.toUpperCase() + ': ' + '$' + short4.precio + '\n' );
-    let quiereShort = prompt('Quiere alguno de estos?').toLowerCase();
-    let precioShortTotal = 0; 
-    if (quiereShort != 'si' && quiereShort != 'no'){
-        quiereShort = prompt('Por favor, ingrese si o no');
-    }   
-    while (quiereShort == 'si') {
-        let cualShort = prompt('Cual short desea comprar? Ingrese el nombre del producto').toLowerCase();
-        if (!baseShorts.find(f => f.nombre == cualShort)) {
-            quiereShort = prompt('Ese no lo tenemos, querés otro?'); 
-        } else {
-            let elShort = baseShorts.find(f => f.nombre == cualShort);
-            let cuantosShorts = parseInt(prompt('Cuántos quiere comprar?'));
-            if (cuantosShorts > elShort.stock) {
-                alert('No tenemos esa cantidad, solo tenemos ' + elShort.stock + ' unidades');
-            } else {
-                precioShortTotal = precioShortTotal + (elShort.precio * cuantosShorts);
-                alert('Son $' + precioShortTotal);
-                elShort.venta(cuantosShorts);
-            }
-            quiereShort = prompt('Quiere comprar otro short?');
-        }
-    }
-    return precioShortTotal; 
-}
-
-function compraRemera () {
-    alert('A continuación verá los productos por su nombre y precio.')
-    alert(remera1.nombre.toUpperCase() + ': ' + '$' + remera1.precio + '\n' + remera2.nombre.toUpperCase() + ': ' + '$' + remera2.precio + '\n' + remera3.nombre.toUpperCase() + ': ' + '$' + remera3.precio + '\n' + remera4.nombre.toUpperCase() + ': ' + '$' + remera4.precio + '\n' );
-    let quiereRemera = prompt('Quiere alguna de estas?').toLowerCase(); 
-    let precioRemeraTotal = 0; 
-    if (quiereRemera != 'si' && quiereRemera != 'no'){
-        quiereRemera = prompt('Por favor, ingrese si o no');
-    } 
-    while (quiereRemera == 'si') {
-        let cualRemera = prompt('Cuál remera quiere comprar? Ingrese el nombre del producto').toLowerCase();
-        if (!baseRemeras.find(r => r.nombre == cualRemera)) {
-            quiereRemera = prompt('Esa no la tenemos, querés otra?');
-        } else {
-            let laRemera = baseRemeras.find(r => r.nombre == cualRemera); 
-            let cuantasRemeras = parseInt(prompt('Cuántas quiere comprar?'));
-            if (cuantasRemeras > laRemera.stock) {
-                alert('No tenemos esa cantidad, solo tenemos ' + laRemera.stock + ' unidades');
-            } else {
-                precioRemeraTotal = precioRemeraTotal + (laRemera.precio * cuantasRemeras); 
-                alert('Son $' + precioRemeraTotal); 
-                laRemera.venta(cuantasRemeras);
-            }
-            quiereRemera = prompt('Quiere comprar otra remera?'); 
-        }
-    }
-    return precioRemeraTotal; 
-}
-
-function compraCamisa () {
-    alert('A continuación verá los productos por su nombre y precio.')
-    alert(camisa1.nombre.toUpperCase() + ': ' + '$' + camisa1.precio + '\n' + camisa2.nombre.toUpperCase() + ': ' + '$' + camisa2.precio + '\n' + camisa3.nombre.toUpperCase() + ': ' + '$' + camisa3.precio + '\n' + camisa4.nombre.toUpperCase() + ': ' + '$' + camisa4.precio + '\n' + camisa5.nombre.toUpperCase() + ': ' + '$' + camisa5.precio + '\n' + camisa6.nombre.toUpperCase() + ': ' + '$' + camisa6.precio + '\n' + camisa7.nombre.toUpperCase() + ': ' + '$' + camisa7.precio + '\n' + camisa8.nombre.toUpperCase() + ': ' + '$' + camisa8.precio);
-    let quiereCamisa = prompt('Quiere alguna de estas?').toLowerCase(); 
-    let precioCamisaTotal = 0;
-    if (quiereCamisa != 'si' && quiereCamisa != 'no'){
-        quiereCamisa = prompt('Por favor, ingrese si o no');
-    } 
-    while (quiereCamisa == 'si') {
-        let cualCamisa = prompt('Cual camisa quiere comprar? Ingrese el nombre del producto').toLowerCase(); 
-        if (!baseCamisas.find(c => c.nombre == cualCamisa)) {
-            quiereCamisa = prompt('Esa no la tenemos, querés otra?'); 
-        } else {
-            let laCamisa = baseCamisas.find(c => c.nombre == cualCamisa); 
-            let cuantasCamisas = parseInt(prompt('Cuántas quiere comprar?')); 
-            if (cuantasCamisas > laCamisa.stock) {
-                alert('No tenemos esa cantidad, solo tenemos ' + laCamisa.stock + ' unidades'); 
-            } else {
-                precioCamisaTotal = precioCamisaTotal + (laCamisa.precio * cuantasCamisas); 
-                alert('Son $' + precioCamisaTotal); 
-                laCamisa.venta(cuantasCamisas);  
-        }
-        quiereCamisa = prompt('Quiere comprar otra camisa?');
-        }
-    }
-    return precioCamisaTotal; 
-}
-/*
-let quiereComprar = prompt('Quiere realizar alguna compra?').toLowerCase(); 
-let valorCompra = 0;
-let shortsComprados = [];
-let remerasCompradas = [];
-let camisasCompradas = [];  
-while (quiereComprar == 'si') {
-    let productoDeseado = prompt('Quiere short, camisa o remera?').toLowerCase(); 
-    switch(productoDeseado) {
-        case 'short': 
-            let precioCompraShort = compraShort(); 
-            valorCompra = valorCompra + precioCompraShort; 
-            break; 
-        case 'remera': 
-            let precioCompraRemera = compraRemera(); 
-            valorCompra = valorCompra + precioCompraRemera; 
-            break; 
-        case 'camisa': 
-            let precioCompraCamisa = compraCamisa(); 
-            valorCompra = valorCompra + precioCompraCamisa; 
-            break; 
-        default: 
-            alert('No tenemos ese producto'); 
-            break;  
-    }
-    alert('El valor de su compra es de $' + valorCompra);
-    quiereComprar = prompt('Quiere seguir comprando?'); 
-}*/
-
-let quiereComprar = prompt('Quiere realizar alguna compra?').toLowerCase();
-let valorCompra = 0;
-let shortsComprados = [];
-let remerasCompradas = [];
-let camisasCompradas = [];
-if (quiereComprar == 'si') {
-    let productoDeseado = prompt('Quiere short, camisa o remera?').toLowerCase();
-    let sectionCamisas = document.getElementById('camisas');
-    let sectionRemeras = document.getElementById('remeras');
-    let sectionShorts = document.getElementById('shorts');
-    let muestraCompra = document.createElement('div');
-    muestraCompra.className = 'muestraCompra'
-        switch(productoDeseado) {
-        case 'short':
-            sectionRemeras.parentNode.removeChild(sectionRemeras);
-            sectionCamisas.parentNode.removeChild(sectionCamisas);
-            let precioCompraShort = compraShort();
-            valorCompra = valorCompra + precioCompraShort;
-            muestraCompra.innerHTML = `<h3>El valor de su compra es de $${valorCompra}</h3>`;
-            document.getElementById('shorts').appendChild(muestraCompra);
-            break;
-        case 'remera':
-            sectionCamisas.parentNode.removeChild(sectionCamisas);
-            sectionShorts.parentNode.removeChild(sectionShorts);
-            let precioCompraRemera = compraRemera();
-            valorCompra = valorCompra + precioCompraRemera;
-            muestraCompra.innerHTML = `<h3>El valor de su compra es de $${valorCompra}</h3>`;
-            document.getElementById('remeras').appendChild(muestraCompra);
-            break;
-        case 'camisa':
-            sectionRemeras.parentNode.removeChild(sectionRemeras);
-            sectionShorts.parentNode.removeChild(sectionShorts);
-            let precioCompraCamisa = compraCamisa();
-            valorCompra = valorCompra + precioCompraCamisa;
-            muestraCompra.innerHTML = `<h3>El valor de su compra es de $${valorCompra}</h3>`;
-            document.getElementById('camisas').appendChild(muestraCompra);
-            break;
-        default:
-            alert('No tenemos ese producto');
-            break;
-    }
-} else {
-    alert('Ok');
-}
-
-
