@@ -22,6 +22,7 @@
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav navbar-items justify-content-between">
+                    <button id="btn-usuario">Iniciar Sesión</button>
                     <a class="nav-link active" aria-current="page" href="#">Principal</a>
                     <a class="nav-link" href="#">Nosotros</a>
                     <a class="nav-link" href="#">Formas de Pago</a>
@@ -53,7 +54,7 @@
         </div>
         <section class="mt-3" id="camisas">
           <h2 class="section-title">Nuestras camisas</h2>
-          <div class="container mt-3"> 
+          <div class="container mt-3">
               <div class="row mt-4 d-flex">
                 <div class="col-lg-3 col-sm-12">
                   <div class="item-card d-flex flex-column align-items-center">
@@ -61,7 +62,7 @@
                     <img class="item-img" src="assets/blue_tribu.jpg" alt="Camisa Blue Tribu">
                     <div id="btribu-price" class="item-price">$2100</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-btribu" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-btribu" type="number" min="1" max="5">
                       <button id="btn-btribu" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -72,7 +73,7 @@
                     <img class="item-img" src="assets/blue_marley.jpg" alt="Camisa Blue Marley">
                     <div id="bmarley-price" class="item-price">$2500</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-bmarley" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-bmarley" type="number" min="1" max="5">
                       <button id="btn-bmarley" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -83,7 +84,7 @@
                     <img class="item-img" src="assets/yellow_submarine.jpg" alt="Camisa Yellow Submarine">
                     <div id="ysubmarine-price" class="item-price">$1950</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-ysubmarine" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-ysubmarine" type="number" min="1" max="5">
                       <button id="btn-ysubmarine" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -94,7 +95,7 @@
                     <img class="item-img" src="assets/dylan.jpg" alt="Camisa Dylan">
                     <div id="dylan-price" class="item-price">$2225</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-dylan" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-dylan" type="number" min="1" max="5">
                       <button id="btn-dylan" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -107,7 +108,7 @@
                     <img class="item-img" src="assets/malibu.jpg" alt="Camisa Malibu">
                     <div id="malibu-price" class="item-price">$2675</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-malibu" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-malibu" type="number" min="1" max="5">
                       <button id="btn-malibu" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -118,7 +119,7 @@
                     <img class="item-img" src="assets/milo.jpg" alt="Camisa Milo">
                     <div id="milo-price" class="item-price">$2250</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-milo" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-milo" type="number" min="1" max="5">
                       <button id="btn-milo" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -129,7 +130,7 @@
                     <img class="item-img" src="assets/new_hans.jpg" alt="Camisa New Hans">
                     <div id="nhans-price" class="item-price">$2700</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-nhans" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-nhans" type="number" min="1" max="5">
                       <button id="btn-nhans" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -140,7 +141,7 @@
                     <img class="item-img" src="assets/red_maui.jpg" alt="Camisa Red Maui">
                     <div id="rmaui-price" class="item-price">$2340</div>
                     <div class="d-flex justify-content-between">
-                      <input id="cant-rmaui" type="number" min="1" max="5">
+                      <input class="stock-camisas" id="cant-rmaui" type="number" min="1" max="5">
                       <button id="btn-rmaui" class="btn btn-primary">Agregar al carrito</button>
                     </div>
                   </div>
@@ -158,7 +159,7 @@
                   <img class="item-img" src="assets/koi.jpg" alt="Remera Koi">
                   <div id="koi-price" class="item-price">$1750</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-koi" type="number" min="1" max="5">
+                    <input class="stock-remeras" id="cant-koi" type="number" min="1" max="5">
                     <button id="btn-koi" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -169,7 +170,7 @@
                   <img class="item-img" src="assets/lisa_mostaza.jpg" alt="Remera lisa Mostaza">
                   <div id="mostaza-price" class="item-price">$1600</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-mostaza" type="number" min="1" max="5">
+                    <input class="stock-remeras" id="cant-mostaza" type="number" min="1" max="5">
                     <button id="btn-mostaza" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -180,7 +181,7 @@
                   <img class="item-img" src="assets/lisa_bordo.jpg" alt="Remera lisa Bordo">
                   <div id="bordo-price" class="item-price">$1600</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-bordo" type="number" min="1" max="5">
+                    <input class="stock-remeras" id="cant-bordo" type="number" min="1" max="5">
                     <button id="btn-bordo" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -191,7 +192,7 @@
                   <img class="item-img" src="assets/lisa_verde_agua.jpg" alt="Remera lisa Verde Agua">
                   <div id="verdeagua-price" class="item-price">$1600</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-verdeagua" type="number" min="1" max="5">
+                    <input class="stock-remeras" id="cant-verdeagua" type="number" min="1" max="5">
                     <button id="btn-verdeagua" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -209,7 +210,7 @@
                   <img class="item-img" src="assets/short_hans.jpg" alt="Short de baño Hans">
                   <div id="hans-price" class="item-price">$2150</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-hans" type="number" min="1" max="5">
+                    <input class="stock-shorts" id="cant-hans" type="number" min="1" max="5">
                     <button id="btn-hans" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -220,7 +221,7 @@
                   <img class="item-img" src="assets/short_jail.jpg" alt="Short de baño Jail">
                   <div id="jail-price" class="item-price">$2200</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-jail" type="number" min="1" max="5">
+                    <input class="stock-shorts" id="cant-jail" type="number" min="1" max="5">
                     <button id="btn-jail" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -231,7 +232,7 @@
                   <img class="item-img" src="assets/short_pierre.jpg" alt="Short de baño Pierre">
                   <div id="pierre-price" class="item-price">$2000</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-pierre" type="number" min="1" max="5">
+                    <input class="stock-shorts" id="cant-pierre" type="number" min="1" max="5">
                     <button id="btn-pierre" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -242,7 +243,7 @@
                   <img class="item-img" src="assets/short_rick.jpg" alt="Short de baño Rick">
                   <div id="rick-price" class="item-price">$2350</div>
                   <div class="d-flex justify-content-between">
-                    <input id="cant-rick" type="number" min="1" max="5">
+                    <input class="stock-shorts" id="cant-rick" type="number" min="1" max="5">
                     <button id="btn-rick" class="btn btn-primary">Agregar al carrito</button>
                   </div>
                 </div>
@@ -271,7 +272,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-sm-12 d-flex justify-content-around align-items-center">
-            <a class="icon-link" href="https://www.instagram.com/oceanwolf.arg/"><i class="fab fa-instagram iconos"></i></a>
+            <a class="icon-link" href="https://www.instagram.com/oceanwolf.arg/" target="_blank"><i class="fab fa-instagram iconos"></i></a>
             <i class="fab fa-whatsapp iconos"></i>
           </div>
           <div class="col-lg-4 col-sm-12">
