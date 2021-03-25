@@ -125,6 +125,14 @@ function respuestaBtribu () {
         let precioBtribu = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioBtribu * cantidad);
         baseCamisas[0].venta(cantidad);
+        let inputTribu = document.getElementById('cant-btribu');
+        document.getElementById('cant-btribu').value = "";
+        inputTribu.setAttribute('max', `${baseCamisas[0].stock}`);
+        if (baseCamisas[0].stock < 1){
+            inputTribu.parentNode.removeChild(inputTribu);
+            btnBtribu.parentNode.removeChild(btnBtribu);
+            let spanBtribu = document.getElementById('span-btribu').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -139,6 +147,14 @@ function respuestaBmarley () {
         let precioBmarley = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioBmarley * cantidad);
         baseCamisas[1].venta(cantidad);
+        let inputMarley = document.getElementById('cant-bmarley');
+        document.getElementById('cant-bamrley').value = "";
+        inputMarley.setAttribute('max', `${baseCamisas[1].stock}`);
+        if (baseCamisas[1].stock < 1){
+            inputMarley.parentNode.removeChild(inputMarley);
+            btnBmarley.parentNode.removeChild(btnBmarley);
+            let spanBmarley = document.getElementById('span-bmarley').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -153,6 +169,14 @@ function respuestaYsubmarine () {
         let precioYsubmarine = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioYsubmarine * cantidad);
         baseCamisas[2].venta(cantidad);
+        let inputYsubmarine = document.getElementById('cant-ysubmarine');
+        document.getElementById('cant-ysubmarine').value = "";
+        inputYsubmarine.setAttribute('max', `${baseCamisas[2].stock}`);
+        if (baseCamisas[2].stock < 1){
+            inputYsubmarine.parentNode.removeChild(inputYsubmarine);
+            btnYsubmarine.parentNode.removeChild(btnYsubmarine);
+            let spanYsubmarine = document.getElementById('span-ysubmarine').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -167,6 +191,14 @@ function respuestaDylan () {
         let precioDylan = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioDylan * cantidad);
         baseCamisas[3].venta(cantidad);
+        let inputDylan = document.getElementById('cant-dylan');
+        document.getElementById('cant-dylan').value = "";
+        inputDylan.setAttribute('max', `${baseCamisas[3].stock}`);
+        if (baseCamisas[3].stock < 1){
+            inputDylan.parentNode.removeChild(inputDylan);
+            btnDylan.parentNode.removeChild(btnDylan);
+            let spanDylan = document.getElementById('span-dylan').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -181,6 +213,14 @@ function respuestaMalibu () {
         let precioMalibu = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioMalibu * cantidad);
         baseCamisas[4].venta(cantidad);
+        let inputMalibu = document.getElementById('cant-malibu');
+        document.getElementById('cant-malibu').value = "";
+        inputMalibu.setAttribute('max', `${baseCamisas[4].stock}`);
+        if (baseCamisas[4].stock < 1){
+            inputMalibu.parentNode.removeChild(inputMalibu);
+            btnMalibu.parentNode.removeChild(btnMalibu);
+            let spanMalibu = document.getElementById('span-malibu').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -195,6 +235,14 @@ function respuestaMilo () {
         let precioMilo = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioMilo * cantidad);
         baseCamisas[5].venta(cantidad);
+        let inputMilo = document.getElementById('cant-milo');
+        document.getElementById('cant-milo').value = "";
+        inputMilo.setAttribute('max', `${baseCamisas[5].stock}`);
+        if (baseCamisas[5].stock < 1){
+            inputMilo.parentNode.removeChild(inputMilo);
+            btnMilo.parentNode.removeChild(btnMilo);
+            let spanMilo = document.getElementById('span-milo').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -209,6 +257,14 @@ function respuestaNhans () {
         let precioNhans = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioNhans * cantidad);
         baseCamisas[6].venta(cantidad);
+        let inputNhans = document.getElementById('cant-nhans');
+        document.getElementById('cant-nhans').value = "";
+        inputNhans.setAttribute('max', `${baseCamisas[6].stock}`);
+        if (baseCamisas[6].stock < 1){
+            inputNhans.parentNode.removeChild(inputNhans);
+            btnNhans.parentNode.removeChild(btnNhans);
+            let spanNhans = document.getElementById('span-nhans').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -223,6 +279,14 @@ function respuestaRmaui () {
         let precioRmaui = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioRmaui * cantidad);
         baseCamisas[7].venta(cantidad);
+        let inputRmaui = document.getElementById('cant-rmaui');
+        document.getElementById('cant-rmaui').value = "";
+        inputRmaui.setAttribute('max', `${baseCamisas[7].stock}`);
+        if (baseCamisas[7].stock < 1){
+            inputRmaui.parentNode.removeChild(inputRmaui);
+            btnRmaui.parentNode.removeChild(btnRmaui);
+            let spanRmaui = document.getElementById('span-rmaui').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -237,6 +301,14 @@ function respuestaKoi () {
         let precioKoi = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioKoi * cantidad);
         baseRemeras[0].venta(cantidad);
+        let inputKoi = document.getElementById('cant-koi');
+        document.getElementById('cant-koi').value = "";
+        inputKoi.setAttribute('max', `${baseRemeras[0].stock}`);
+        if (baseRemeras[0].stock < 1){
+            inputKoi.parentNode.removeChild(inputKoi);
+            btnKoi.parentNode.removeChild(btnKoi);
+            let spanKoi = document.getElementById('span-koi').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -251,6 +323,14 @@ function respuestaMostaza () {
         let precioMostaza = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioMostaza * cantidad);
         baseRemeras[1].venta(cantidad);
+        let inputMostaza = document.getElementById('cant-mostaza');
+        document.getElementById('cant-mostaza').value = "";
+        inputMostaza.setAttribute('max', `${baseRemeras[1].stock}`);
+        if (baseRemeras[1].stock < 1){
+            inputMostaza.parentNode.removeChild(inputMostaza);
+            btnMostaza.parentNode.removeChild(btnMostaza);
+            let spanMostaza = document.getElementById('span-mostaza').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -265,6 +345,14 @@ function respuestaBordo () {
         let precioBordo = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioBordo * cantidad);
         baseRemeras[2].venta(cantidad);
+        let inputBordo = document.getElementById('cant-bordo');
+        document.getElementById('cant-bordo').value = "";
+        inputBordo.setAttribute('max', `${baseRemeras[2].stock}`);
+        if (baseRemeras[2].stock < 1){
+            inputBordo.parentNode.removeChild(inputBordo);
+            btnBordo.parentNode.removeChild(btnBordo);
+            let spanBordo = document.getElementById('span-bordo').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -279,6 +367,14 @@ function respuestaVerdeagua () {
         let precioVerdeagua = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioVerdeagua * cantidad);
         baseRemeras[3].venta(cantidad);
+        let inputVerdeagua = document.getElementById('cant-verdeagua');
+        document.getElementById('cant-verdeagua').value = "";
+        inputVerdeagua.setAttribute('max', `${baseRemeras[3].stock}`);
+        if (baseRemeras[3].stock < 1){
+            inputVerdeagua.parentNode.removeChild(inputVerdeagua);
+            btnVerdeagua.parentNode.removeChild(btnVerdeagua);
+            let spanVerdeagua = document.getElementById('span-verdeagua').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -293,6 +389,14 @@ function respuestaHans () {
         let precioHans = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioHans * cantidad);
         baseShorts[0].venta(cantidad);
+        let inputHans = document.getElementById('cant-hans');
+        document.getElementById('cant-hans').value = "";
+        inputHans.setAttribute('max', `${baseShorts[0].stock}`);
+        if (baseShorts[0].stock < 1){
+            inputHans.parentNode.removeChild(inputHans);
+            btnHans.parentNode.removeChild(btnHans);
+            let spanHans = document.getElementById('span-hans').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -307,6 +411,14 @@ function respuestaJail () {
         let precioJail = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioJail * cantidad);
         baseShorts[1].venta(cantidad);
+        let inputJail = document.getElementById('cant-jail');
+        document.getElementById('cant-jail').value = "";
+        inputJail.setAttribute('max', `${baseShorts[1].stock}`);
+        if (baseShorts[1].stock < 1){
+            inputJail.parentNode.removeChild(inputJail);
+            btnJail.parentNode.removeChild(btnJail);
+            let spanJail = document.getElementById('span-jail').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -321,6 +433,14 @@ function respuestaPierre () {
         let precioPierre = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioPierre * cantidad);
         baseShorts[2].venta(cantidad);
+        let inputPierre = document.getElementById('cant-pierre');
+        document.getElementById('cant-pierre').value = "";
+        inputPierre.setAttribute('max', `${baseShorts[2].stock}`);
+        if (baseShorts[2].stock < 1){
+            inputPierre.parentNode.removeChild(inputPierre);
+            btnPierre.parentNode.removeChild(btnPierre);
+            let spanPierre = document.getElementById('span-pierre').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');
@@ -335,6 +455,14 @@ function respuestaRick () {
         let precioRick = parseInt(precio.match(d));
         compraTotal = compraTotal + (precioRick * cantidad);
         baseShorts[3].venta(cantidad);
+        let inputRick = document.getElementById('cant-rick');
+        document.getElementById('cant-rick').value = "";
+        inputRick.setAttribute('max', `${baseShorts[3].stock}`);
+        if (baseShorts[3].stock < 1){
+            inputRick.parentNode.removeChild(inputRick);
+            btnRick.parentNode.removeChild(btnRick);
+            let spanRick = document.getElementById('span-rick').textContent = 'Sin Stock!';
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         alert('Debes seleccionar la cantidad');

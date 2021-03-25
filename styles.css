@@ -28,6 +28,11 @@ body {
     margin-top: 4px;
 }
 
+.span-stock {
+    font-size: 2rem;
+    color: gray;
+}
+
 .navbar-items a:hover {
     color: black;
 }
