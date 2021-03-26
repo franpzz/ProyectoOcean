@@ -92,6 +92,11 @@ body {
     font-size: 1.5rem;
 }
 
+#ver-carrito {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
 footer {
     background-color: #f5f4dc;
 }

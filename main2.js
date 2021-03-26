@@ -20,7 +20,7 @@ let camisa6 = new Productos('Milo', 'camisa', 2250, 6, 5);
 let camisa7 = new Productos('New Hans', 'camisa', 2700, 7, 4);
 let camisa8 = new Productos('Red Maui', 'camisa', 2340, 8, 36);
 
-baseCamisas = [];
+const baseCamisas = [];
 baseCamisas.push(camisa1);
 baseCamisas.push(camisa2);
 baseCamisas.push(camisa3);
@@ -35,7 +35,7 @@ let remera2 = new Productos('Mostaza', 'remera', 1600, 2, 2);
 let remera3 = new Productos('Bordo', 'remera', 1600, 3, 30);
 let remera4 = new Productos('Verde Agua', 'remera', 1600, 4, 10);
 
-baseRemeras = [];
+const baseRemeras = [];
 baseRemeras.push(remera1);
 baseRemeras.push(remera2);
 baseRemeras.push(remera3);
@@ -46,11 +46,13 @@ let short2 = new Productos('Jail', 'short', 2200, 2, 17);
 let short3 = new Productos('Pierre', 'short', 2000, 3, 11);
 let short4 = new Productos('Rick', 'short', 2350, 4, 3);
 
-baseShorts = [];
+const baseShorts = [];
 baseShorts.push(short1);
 baseShorts.push(short2);
 baseShorts.push(short3);
 baseShorts.push(short4);
+
+const nombresProductosCarrito = [];
 
 const inicioSesion = document.getElementById('btn-usuario');
 inicioSesion.addEventListener('click', iniciarSesion);
@@ -137,6 +139,11 @@ function respuestaBtribu () {
             btnBtribu.parentNode.removeChild(btnBtribu);
             let spanBtribu = document.getElementById('span-btribu').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseCamisas[0].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraBtribu = document.getElementById('compra-btribu');
@@ -167,6 +174,11 @@ function respuestaBmarley () {
             inputMarley.parentNode.removeChild(inputMarley);
             btnBmarley.parentNode.removeChild(btnBmarley);
             let spanBmarley = document.getElementById('span-bmarley').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseCamisas[1].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -199,6 +211,11 @@ function respuestaYsubmarine () {
             btnYsubmarine.parentNode.removeChild(btnYsubmarine);
             let spanYsubmarine = document.getElementById('span-ysubmarine').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseCamisas[2].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraYsubmarine = document.getElementById('compra-ysubmarine');
@@ -229,6 +246,11 @@ function respuestaDylan () {
             inputDylan.parentNode.removeChild(inputDylan);
             btnDylan.parentNode.removeChild(btnDylan);
             let spanDylan = document.getElementById('span-dylan').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseCamisas[3].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -261,6 +283,11 @@ function respuestaMalibu () {
             btnMalibu.parentNode.removeChild(btnMalibu);
             let spanMalibu = document.getElementById('span-malibu').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseCamisas[4].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraMalibu = document.getElementById('compra-malibu');
@@ -291,6 +318,11 @@ function respuestaMilo () {
             inputMilo.parentNode.removeChild(inputMilo);
             btnMilo.parentNode.removeChild(btnMilo);
             let spanMilo = document.getElementById('span-milo').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseCamisas[5].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -323,6 +355,11 @@ function respuestaNhans () {
             btnNhans.parentNode.removeChild(btnNhans);
             let spanNhans = document.getElementById('span-nhans').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseCamisas[6].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraNhans = document.getElementById('compra-nhans');
@@ -353,6 +390,11 @@ function respuestaRmaui () {
             inputRmaui.parentNode.removeChild(inputRmaui);
             btnRmaui.parentNode.removeChild(btnRmaui);
             let spanRmaui = document.getElementById('span-rmaui').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseCamisas[7].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -385,6 +427,11 @@ function respuestaKoi () {
             btnKoi.parentNode.removeChild(btnKoi);
             let spanKoi = document.getElementById('span-koi').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseRemeras[0].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraKoi = document.getElementById('compra-koi');
@@ -415,6 +462,11 @@ function respuestaMostaza () {
             inputMostaza.parentNode.removeChild(inputMostaza);
             btnMostaza.parentNode.removeChild(btnMostaza);
             let spanMostaza = document.getElementById('span-mostaza').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseRemeras[1].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -447,6 +499,11 @@ function respuestaBordo () {
             btnBordo.parentNode.removeChild(btnBordo);
             let spanBordo = document.getElementById('span-bordo').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseRemeras[2].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraBordo = document.getElementById('compra-bordo');
@@ -477,6 +534,11 @@ function respuestaVerdeagua () {
             inputVerdeagua.parentNode.removeChild(inputVerdeagua);
             btnVerdeagua.parentNode.removeChild(btnVerdeagua);
             let spanVerdeagua = document.getElementById('span-verdeagua').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseRemeras[3].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -509,6 +571,11 @@ function respuestaHans () {
             btnHans.parentNode.removeChild(btnHans);
             let spanHans = document.getElementById('span-hans').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseShorts[0].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraHans = document.getElementById('compra-hans');
@@ -539,6 +606,11 @@ function respuestaJail () {
             inputJail.parentNode.removeChild(inputJail);
             btnJail.parentNode.removeChild(btnJail);
             let spanJail = document.getElementById('span-jail').textContent = 'Sin Stock!';
+        }
+        let nombreProducto = baseShorts[1].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
@@ -571,6 +643,11 @@ function respuestaPierre () {
             btnPierre.parentNode.removeChild(btnPierre);
             let spanPierre = document.getElementById('span-pierre').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseShorts[2].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraPierre = document.getElementById('compra-pierre');
@@ -602,6 +679,11 @@ function respuestaRick () {
             btnRick.parentNode.removeChild(btnRick);
             let spanRick = document.getElementById('span-rick').textContent = 'Sin Stock!';
         }
+        let nombreProducto = baseShorts[3].nombre;
+        let nombreInCarrito = nombresProductosCarrito.find(n => n == nombreProducto);
+        if (!nombreInCarrito) {
+            nombresProductosCarrito.push(nombreProducto);
+        }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
         let compraRick = document.getElementById('compra-rick');
@@ -612,6 +694,33 @@ function respuestaRick () {
         spanSinCant.id = "span-alert";
     }
 };
+
+let btnCarrito = document.getElementById('ver-carrito');
+btnCarrito.addEventListener('click', mostrarCarrito);
+
+function mostrarCarrito () {
+    let divCarrito = document.getElementById('carritoContainer');
+    let divProductos = document.createElement('div');
+    divProductos.id = 'productos-carrito';
+    divProductos.classList= 'col-lg-6', 'col-sm-12', 'text-center';
+    let listaCarrito = document.createElement('ul');
+    divCarrito.appendChild(divProductos);
+    divProductos.appendChild(listaCarrito);
+    let divPrecioCompra = document.createElement('div');
+    divPrecioCompra.id = 'precio-carrito';
+    divPrecioCompra.classList = 'col-lg-6', 'col-sm-12', 'text-center';
+    listaCarrito.id = 'lista-carrito';
+    divCarrito.appendChild(divPrecioCompra);
+    for (const x of nombresProductosCarrito) {
+        let enCarrito = document.createElement('li');
+        enCarrito.textContent = x;
+        listaCarrito.appendChild(enCarrito);
+    }
+    let precioCarrito = document.createElement('p');
+    precioCarrito.classList = 'precio-final';
+    precioCarrito.textContent = compraTotal;
+    divPrecioCompra.appendChild(precioCarrito);
+}
 
 let formulario = document.getElementById('formulario');
 formulario.addEventListener('submit', capturarDatos);
