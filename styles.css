@@ -33,6 +33,11 @@ body {
     color: gray;
 }
 
+.span-cant {
+    font-size: 1.5rem;
+    color: red;
+}
+
 .navbar-items a:hover {
     color: black;
 }

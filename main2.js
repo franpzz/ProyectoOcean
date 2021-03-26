@@ -11,14 +11,14 @@ class Productos {
     }
 }
 
-let camisa1 = new Productos('btribu', 'camisa', 2100, 1, 25);
-let camisa2 = new Productos('bmarley', 'camisa', 2500, 2, 30);
-let camisa3 = new Productos('ysubmarine', 'camisa', 1950, 3, 25);
-let camisa4 = new Productos('dylan', 'camisa', 2225, 4, 2);
-let camisa5 = new Productos('malibu', 'camisa', 2675, 5, 10);
-let camisa6 = new Productos('milo', 'camisa', 2250, 6, 5);
-let camisa7 = new Productos('nhans', 'camisa', 2700, 7, 4);
-let camisa8 = new Productos('rmaui', 'camisa', 2340, 8, 36);
+let camisa1 = new Productos('Blue Tribu', 'camisa', 2100, 1, 25);
+let camisa2 = new Productos('Blue Marley', 'camisa', 2500, 2, 30);
+let camisa3 = new Productos('Yellow Submarine', 'camisa', 1950, 3, 25);
+let camisa4 = new Productos('Dylan', 'camisa', 2225, 4, 2);
+let camisa5 = new Productos('Malibu', 'camisa', 2675, 5, 10);
+let camisa6 = new Productos('Milo', 'camisa', 2250, 6, 5);
+let camisa7 = new Productos('New Hans', 'camisa', 2700, 7, 4);
+let camisa8 = new Productos('Red Maui', 'camisa', 2340, 8, 36);
 
 baseCamisas = [];
 baseCamisas.push(camisa1);
@@ -30,10 +30,10 @@ baseCamisas.push(camisa6);
 baseCamisas.push(camisa7);
 baseCamisas.push(camisa8);
 
-let remera1 = new Productos('koi', 'remera', 1750, 1, 10);
-let remera2 = new Productos('mostaza', 'remera', 1600, 2, 2);
-let remera3 = new Productos('bordo', 'remera', 1600, 3, 30);
-let remera4 = new Productos('verdeagua', 'remera', 1600, 4, 10);
+let remera1 = new Productos('Koi', 'remera', 1750, 1, 10);
+let remera2 = new Productos('Mostaza', 'remera', 1600, 2, 2);
+let remera3 = new Productos('Bordo', 'remera', 1600, 3, 30);
+let remera4 = new Productos('Verde Agua', 'remera', 1600, 4, 10);
 
 baseRemeras = [];
 baseRemeras.push(remera1);
@@ -41,10 +41,10 @@ baseRemeras.push(remera2);
 baseRemeras.push(remera3);
 baseRemeras.push(remera4);
 
-let short1 = new Productos('harris', 'short', 2150, 1, 22);
-let short2 = new Productos('jail', 'short', 2200, 2, 17);
-let short3 = new Productos('pierre', 'short', 2000, 3, 11);
-let short4 = new Productos('rick', 'short', 2350, 4, 3);
+let short1 = new Productos('Hans', 'short', 2150, 1, 22);
+let short2 = new Productos('Jail', 'short', 2200, 2, 17);
+let short3 = new Productos('Pierre', 'short', 2000, 3, 11);
+let short4 = new Productos('Rick', 'short', 2350, 4, 3);
 
 baseShorts = [];
 baseShorts.push(short1);
@@ -119,6 +119,10 @@ document.getElementById('main').appendChild(muestraCompra);
 muestraCompra.className = 'muestraCompra mt-4'
 btnBtribu.addEventListener('click', respuestaBtribu);
 function respuestaBtribu () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-btribu').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('btribu-price').textContent;
@@ -135,12 +139,21 @@ function respuestaBtribu () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraBtribu = document.getElementById('compra-btribu');
+        let spanSinCant = document.createElement('span');
+        compraBtribu.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnBmarley.addEventListener('click', respuestaBmarley);
 function respuestaBmarley () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-bmarley').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('bmarley-price').textContent;
@@ -157,12 +170,21 @@ function respuestaBmarley () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraBmarley = document.getElementById('compra-bmarley');
+        let spanSinCant = document.createElement('span');
+        compraBmarley.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnYsubmarine.addEventListener('click', respuestaYsubmarine);
 function respuestaYsubmarine () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-ysubmarine').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('ysubmarine-price').textContent;
@@ -179,12 +201,21 @@ function respuestaYsubmarine () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraYsubmarine = document.getElementById('compra-ysubmarine');
+        let spanSinCant = document.createElement('span');
+        compraYsubmarine.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnDylan.addEventListener('click', respuestaDylan);
 function respuestaDylan () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-dylan').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('dylan-price').textContent;
@@ -201,12 +232,21 @@ function respuestaDylan () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraDylan = document.getElementById('compra-dylan');
+        let spanSinCant = document.createElement('span');
+        compraDylan.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnMalibu.addEventListener('click', respuestaMalibu);
 function respuestaMalibu () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-malibu').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('malibu-price').textContent;
@@ -223,12 +263,21 @@ function respuestaMalibu () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraMalibu = document.getElementById('compra-malibu');
+        let spanSinCant = document.createElement('span');
+        compraMalibu.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnMilo.addEventListener('click', respuestaMilo);
 function respuestaMilo () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-milo').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('milo-price').textContent;
@@ -245,12 +294,21 @@ function respuestaMilo () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraMilo = document.getElementById('compra-milo');
+        let spanSinCant = document.createElement('span');
+        compraMilo.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnNhans.addEventListener('click', respuestaNhans);
 function respuestaNhans () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-nhans').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('nhans-price').textContent;
@@ -267,12 +325,21 @@ function respuestaNhans () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraNhans = document.getElementById('compra-nhans');
+        let spanSinCant = document.createElement('span');
+        compraNhans.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnRmaui.addEventListener('click', respuestaRmaui);
 function respuestaRmaui () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-rmaui').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('rmaui-price').textContent;
@@ -289,12 +356,21 @@ function respuestaRmaui () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraRmaui = document.getElementById('compra-rmaui');
+        let spanSinCant = document.createElement('span');
+        compraRmaui.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnKoi.addEventListener('click', respuestaKoi);
 function respuestaKoi () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-koi').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('koi-price').textContent;
@@ -311,12 +387,21 @@ function respuestaKoi () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraKoi = document.getElementById('compra-koi');
+        let spanSinCant = document.createElement('span');
+        compraKoi.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnMostaza.addEventListener('click', respuestaMostaza);
 function respuestaMostaza () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-mostaza').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('mostaza-price').textContent;
@@ -333,12 +418,21 @@ function respuestaMostaza () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraMostaza = document.getElementById('compra-mostaza');
+        let spanSinCant = document.createElement('span');
+        compraMostaza.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnBordo.addEventListener('click', respuestaBordo);
 function respuestaBordo () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-bordo').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('bordo-price').textContent;
@@ -355,12 +449,21 @@ function respuestaBordo () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraBordo = document.getElementById('compra-bordo');
+        let spanSinCant = document.createElement('span');
+        compraBordo.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnVerdeagua.addEventListener('click', respuestaVerdeagua);
 function respuestaVerdeagua () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-verdeagua').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('verdeagua-price').textContent;
@@ -377,12 +480,21 @@ function respuestaVerdeagua () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraVerdeagua = document.getElementById('compra-verdeagua');
+        let spanSinCant = document.createElement('span');
+        compraVerdeagua.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnHans.addEventListener('click', respuestaHans);
 function respuestaHans () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-hans').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('hans-price').textContent;
@@ -399,12 +511,21 @@ function respuestaHans () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraHans = document.getElementById('compra-hans');
+        let spanSinCant = document.createElement('span');
+        compraHans.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnJail.addEventListener('click', respuestaJail);
 function respuestaJail () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-jail').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('jail-price').textContent;
@@ -421,12 +542,21 @@ function respuestaJail () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraJail = document.getElementById('compra-jail');
+        let spanSinCant = document.createElement('span');
+        compraJail.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnPierre.addEventListener('click', respuestaPierre);
 function respuestaPierre () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-pierre').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('pierre-price').textContent;
@@ -443,12 +573,21 @@ function respuestaPierre () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraPierre = document.getElementById('compra-pierre');
+        let spanSinCant = document.createElement('span');
+        compraPierre.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
 btnRick.addEventListener('click', respuestaRick);
 function respuestaRick () {
+    let spanCant = document.getElementById('span-alert');
+    if (spanCant) {
+        spanCant.parentNode.removeChild(spanCant);
+    }
     let cantidad = parseInt(document.getElementById('cant-rick').value);
     if (cantidad >= 1) {
         let precio = document.getElementById('rick-price').textContent;
@@ -465,7 +604,12 @@ function respuestaRick () {
         }
         muestraCompra.innerHTML = `<h3>El valor de su compra es de $${compraTotal}</h3>`;
     } else {
-        alert('Debes seleccionar la cantidad');
+        let compraRick = document.getElementById('compra-rick');
+        let spanSinCant = document.createElement('span');
+        compraRick.appendChild(spanSinCant);
+        spanSinCant.textContent = "No seleccionaste cantidad";
+        spanSinCant.className = 'span-cant';
+        spanSinCant.id = "span-alert";
     }
 };
 
