@@ -699,10 +699,20 @@ let btnCarrito = document.getElementById('ver-carrito');
 btnCarrito.addEventListener('click', mostrarCarrito);
 
 function mostrarCarrito () {
+    let existeCarritoProductos = document.getElementById('productos-carrito');
+    let existeCarritoPrecio = document.getElementById('precio-carrito');
+    if (existeCarritoProductos && existeCarritoPrecio) {
+        existeCarritoProductos.parentNode.removeChild(existeCarritoProductos);
+        existeCarritoPrecio.parentNode.removeChild(existeCarritoPrecio);
+    }
     let divCarrito = document.getElementById('carritoContainer');
     let divProductos = document.createElement('div');
     divProductos.id = 'productos-carrito';
     divProductos.classList= 'col-lg-6', 'col-sm-12', 'text-center';
+    let tituloProductos = document.createElement('h1');
+    tituloProductos.classList = 'titulo-carrito';
+    tituloProductos.textContent = 'Productos';
+    divProductos.appendChild(tituloProductos);
     let listaCarrito = document.createElement('ul');
     divCarrito.appendChild(divProductos);
     divProductos.appendChild(listaCarrito);
@@ -717,6 +727,10 @@ function mostrarCarrito () {
         listaCarrito.appendChild(enCarrito);
     }
     let precioCarrito = document.createElement('p');
+    let tituloPrecio = document.createElement('h1');
+    tituloPrecio.classList = 'titulo-carrito';
+    tituloPrecio.textContent = 'Precio';
+    divPrecioCompra.appendChild(tituloPrecio);
     precioCarrito.classList = 'precio-final';
     precioCarrito.textContent = compraTotal;
     divPrecioCompra.appendChild(precioCarrito);
