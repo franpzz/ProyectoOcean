@@ -168,7 +168,7 @@ function respuestaBmarley () {
         compraTotal = compraTotal + (precioBmarley * cantidad);
         baseCamisas[1].venta(cantidad);
         let inputMarley = document.getElementById('cant-bmarley');
-        document.getElementById('cant-bamrley').value = "";
+        document.getElementById('cant-bmarley').value = "";
         inputMarley.setAttribute('max', `${baseCamisas[1].stock}`);
         if (baseCamisas[1].stock < 1){
             inputMarley.parentNode.removeChild(inputMarley);
