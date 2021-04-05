@@ -118,7 +118,8 @@ let d = /\d+/;
 let compraTotal = 0;
 let muestraCompra = document.createElement('div');
 document.getElementById('main').appendChild(muestraCompra);
-muestraCompra.className = 'muestraCompra mt-4'
+muestraCompra.className = 'muestraCompra mt-4';
+$
 btnBtribu.addEventListener('click', respuestaBtribu);
 function respuestaBtribu () {
     let spanCant = document.getElementById('span-alert');
