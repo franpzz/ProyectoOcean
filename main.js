@@ -228,6 +228,9 @@ $("#formulario").on("submit", function (e) {
     console.log(`${datos.children[1].children[0].textContent}: ${datos.children[1].children[1].value}`);
 });
 
+$("#ver-carrito").click(() => {
+    $('#carritoContainer').toggle('fast');
+});
 
 
 
