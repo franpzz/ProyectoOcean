@@ -13,6 +13,26 @@ class Productos {
     }
 }
 
+// crear estructura principal de pagina principal
+function estructuraProductos () {
+    $('#router').append('<section id="productos"></section>');
+    $('#router').css({"margin-top": "30px"});
+    $('#productos').append('<h1 id="tituloProductos">¡HEY, WOLF! BIENVENIDO A NUESTRA TIENDA</h1><p id="subtituloProductos">Compra desde la comodidad de tu casa, nosotros hacemos el resto</p>');
+    $('#tituloProductos').css({
+        "text-align": "center",
+        "font-family": "'Lato', sans-serif",
+        "font-size": "4rem",
+        "font-weight": "900"
+    });
+    $('#subtituloProductos').css({
+        "text-align": "center",
+        "font-family": "'Lato', sans-serif",
+        "font-size": "2rem",
+        "font-weight": "600",
+        "margin-top": "20px"
+    });
+};
+
 const baseProductos = [];
 
 $.ajax ({
@@ -21,6 +41,7 @@ $.ajax ({
     dataType: "json",
     success: (res) => {
         res.map(prod => baseProductos.push(new Productos(prod.nombre, prod.idnombre, prod.prenda, prod.precio, prod.id, prod.stock, prod.imagen)));
+        estructuraProductos();
         for (const producto in baseProductos) {
             $('#rowCamisas').append(`<div class="col-lg-3 col-sm-12">
                     <div id="compra-${baseProductos[producto].idnombre}" class="item-card d-flex flex-column align-items-center">
