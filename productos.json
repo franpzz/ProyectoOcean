@@ -1,0 +1,335 @@
+[
+    {
+        "nombre": "Ben",
+        "idnombre": "ben",
+        "prenda": "camisa",
+        "precio": "2500",
+        "stock": "20",
+        "imagen": "assets/ben.jpg",
+        "id": "1"
+    },
+    {
+        "nombre": "Black Jungle",
+        "idnombre": "bjungle",
+        "prenda": "camisa",
+        "precio": "2100",
+        "stock": "10",
+        "imagen": "assets/black_jungle.jpg",
+        "id": "2"
+    },
+    {
+        "nombre": "Blue Marley",
+        "idnombre": "bmarley",
+        "prenda": "camisa",
+        "precio": "2200",
+        "stock": "10",
+        "imagen": "assets/blue_marley.jpg",
+        "id": "3"
+    },
+    {
+        "nombre": "Blue Tribu",
+        "idnombre": "btribu",
+        "prenda": "camisa",
+        "precio": "2100",
+        "stock": "10",
+        "imagen": "assets/blue_tribu.jpg",
+        "id": "4"
+    },
+    {
+        "nombre": "Dylan",
+        "idnombre": "dylan",
+        "prenda": "camisa",
+        "precio": "2400",
+        "stock": "15",
+        "imagen": "assets/dylan.jpg",
+        "id": "5"
+    },
+    {
+        "nombre": "Finn",
+        "idnombre": "finn",
+        "prenda": "camisa",
+        "precio": "3100",
+        "stock": "25",
+        "imagen": "assets/finn.jpg",
+        "id": "6"
+    },
+    {
+        "nombre": "Grey Tokio",
+        "idnombre": "gtokio",
+        "prenda": "camisa",
+        "precio": "3000",
+        "stock": "20",
+        "imagen": "assets/grey_tokio.jpg",
+        "id": "7"
+    },
+    {
+        "nombre": "Henry",
+        "idnombre": "henry",
+        "prenda": "camisa",
+        "precio": "2700",
+        "stock": "15",
+        "imagen": "assets/henry.jpg",
+        "id": "8"
+    },
+    {
+        "nombre": "Hunter",
+        "idnombre": "hunter",
+        "prenda": "short",
+        "precio": "2500",
+        "stock": "20",
+        "imagen": "assets/hunter.jpg",
+        "id": "9"
+    },
+    {
+        "nombre": "Inka",
+        "idnombre": "inka",
+        "prenda": "camisa",
+        "precio": "2800",
+        "stock": "20",
+        "imagen": "assets/inka.jpg",
+        "id": "10"
+    },
+    {
+        "nombre": "Jack",
+        "idnombre": "jack",
+        "prenda": "camisa",
+        "precio": "3000",
+        "stock": "30",
+        "imagen": "assets/jack.jpg",
+        "id": "11"
+    },
+    {
+        "nombre": "Koi",
+        "idnombre": "koi",
+        "prenda": "remera",
+        "precio": "1700",
+        "stock": "20",
+        "imagen": "assets/koi.jpg",
+        "id": "12"
+    },
+    {
+        "nombre": "Leon",
+        "idnombre": "leon",
+        "prenda": "camisa",
+        "precio": "2500",
+        "stock": "10",
+        "imagen": "assets/leon.jpg",
+        "id": "13"
+    },
+    {
+        "nombre": "Bordo",
+        "idnombre": "bordo",
+        "prenda": "remera",
+        "precio": "1500",
+        "stock": "10",
+        "imagen": "assets/lisa_bordo.jpg",
+        "id": "14"
+    },
+    {
+        "nombre": "Mostaza",
+        "idnombre": "mostaza",
+        "prenda": "remera",
+        "precio": "1500",
+        "stock": "10",
+        "imagen": "assets/lisa_mostaza.jpg",
+        "id": "15"
+    },
+    {
+        "nombre": "Verde Agua",
+        "idnombre": "verdeagua",
+        "prenda": "remera",
+        "precio": "1500",
+        "stock": "10",
+        "imagen": "assets/lisa_verde_agua.jpg",
+        "id": "16"
+    },
+    {
+        "nombre": "Malibu",
+        "idnombre": "malibu",
+        "prenda": "camisa",
+        "precio": "2600",
+        "stock": "20",
+        "imagen": "assets/malibu.jpg",
+        "id": "17"
+    },
+    {
+        "nombre": "Militar",
+        "idnombre": "militar",
+        "prenda": "camisa",
+        "precio": "2500",
+        "stock": "20",
+        "imagen": "assets/militar.jpg",
+        "id": "18"
+    },
+    {
+        "nombre": "Milo",
+        "idnombre": "milo",
+        "prenda": "camisa",
+        "precio": "2700",
+        "stock": "25",
+        "imagen": "assets/milo.jpg",
+        "id": "19"
+    },
+    {
+        "nombre": "Mustard",
+        "idnombre": "mustard",
+        "prenda": "camisa",
+        "precio": "2800",
+        "stock": "20",
+        "imagen": "assets/mustard.jpg",
+        "id": "20"
+    },
+    {
+        "nombre": "Navy",
+        "idnombre": "navy",
+        "prenda": "short",
+        "precio": "2100",
+        "stock": "30",
+        "imagen": "assets/navy.jpg",
+        "id": "21"
+    },
+    {
+        "nombre": "New Hans",
+        "idnombre": "nhans",
+        "prenda": "camisa",
+        "precio": "2400",
+        "stock": "15",
+        "imagen": "assets/new_hans.jpg",
+        "id": "22"
+    },
+    {
+        "nombre": "Pantone",
+        "idnombre": "pantone",
+        "prenda": "short",
+        "precio": "2400",
+        "stock": "20",
+        "imagen": "assets/pantone.jpg",
+        "id": "23"
+    },
+    {
+        "nombre": "Paul",
+        "idnombre": "paul",
+        "prenda": "camisa",
+        "precio": "2900",
+        "stock": "30",
+        "imagen": "assets/paul.jpg",
+        "id": "24"
+    },
+    {
+        "nombre": "Peter",
+        "idnombre": "peter",
+        "prenda": "camisa",
+        "precio": "2400",
+        "stock": "10",
+        "imagen": "assets/peter.jpg",
+        "id": "25"
+    },
+    {
+        "nombre": "Ramen",
+        "idnombre": "ramen",
+        "prenda": "remera",
+        "precio": "1800",
+        "stock": "20",
+        "imagen": "assets/ramen.jpg",
+        "id": "26"
+    },
+    {
+        "nombre": "Rayada",
+        "idnombre": "rayada",
+        "prenda": "remera",
+        "precio": "1500",
+        "stock": "10",
+        "imagen": "assets/rayada.jpg",
+        "id": "27"
+    },
+    {
+        "nombre": "Red Maui",
+        "idnombre": "rmaui",
+        "prenda": "camisa",
+        "precio": "2500",
+        "stock": "20",
+        "imagen": "assets/red_maui.jpg",
+        "id": "28"
+    },
+    {
+        "nombre": "Santorini",
+        "idnombre": "santorini",
+        "prenda": "camisa",
+        "precio": "2500",
+        "stock": "15",
+        "imagen": "assets/santorini.jpg",
+        "id": "29"
+    },
+    {
+        "nombre": "Seoul",
+        "idnombre": "seoul",
+        "prenda": "remera",
+        "precio": "1700",
+        "stock": "20",
+        "imagen": "assets/seoul.jpg",
+        "id": "30"
+    },
+    {
+        "nombre": "Hans",
+        "idnombre": "hans",
+        "prenda": "short",
+        "precio": "2000",
+        "stock": "20",
+        "imagen": "assets/short_hans.jpg",
+        "id": "31"
+    },
+    {
+        "nombre": "Jail",
+        "idnombre": "jail",
+        "prenda": "short",
+        "precio": "2100",
+        "stock": "15",
+        "imagen": "assets/short_jail.jpg",
+        "id": "32"
+    },
+    {
+        "nombre": "Pierre",
+        "idnombre": "pierre",
+        "prenda": "short",
+        "precio": "2100",
+        "stock": "20",
+        "imagen": "assets/short_pierre.jpg",
+        "id": "33"
+    },
+    {
+        "nombre": "Rick",
+        "idnombre": "rick",
+        "prenda": "short",
+        "precio": "2200",
+        "stock": "10",
+        "imagen": "assets/short_rick.jpg",
+        "id": "34"
+    },
+    {
+        "nombre": "Snake",
+        "idnombre": "snake",
+        "prenda": "camisa",
+        "precio": "3000",
+        "stock": "20",
+        "imagen": "assets/snake.jpg",
+        "id": "35"
+    },
+    {
+        "nombre": "Tokio",
+        "idnombre": "tokio",
+        "prenda": "camisa",
+        "precio": "2600",
+        "stock": "20",
+        "imagen": "assets/tokio.jpg",
+        "id": "36"
+    },
+    {
+        "nombre": "Yellow Submarine",
+        "idnombre": "ysubmarine",
+        "prenda": "camisa",
+        "precio": "2800",
+        "stock": "30",
+        "imagen": "assets/yellow_submarine.jpg",
+        "id": "37"
+    }
+]

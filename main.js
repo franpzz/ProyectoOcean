@@ -13,6 +13,33 @@ class Productos {
     }
 }
 
+const baseProductos = [];
+
+$.ajax ({
+    method: "GET",
+    url: "productos.json",
+    dataType: "json",
+    success: (res) => {
+        res.map(prod => baseProductos.push(new Productos(prod.nombre, prod.idnombre, prod.prenda, prod.precio, prod.id, prod.stock, prod.imagen)));
+        for (const producto in baseProductos) {
+            $('#rowCamisas').append(`<div class="col-lg-3 col-sm-12">
+                    <div id="compra-${baseProductos[producto].idnombre}" class="item-card d-flex flex-column align-items-center">
+                    </div>
+                </div>`);
+            $(`#compra-${baseProductos[producto].idnombre}`).append(`<div class="item-title">
+                ${baseProductos[producto].prenda} ${baseProductos[producto].nombre}</div>
+                <img class="item-img" src="${baseProductos[producto].imagen}" alt="${baseProductos[producto].prenda} ${baseProductos[producto].nombre}">
+                <div id="${baseProductos[producto].idnombre}-price" class="item-price">$${baseProductos[producto].precio}</div>
+                <div id="sellbox" class="d-flex justify-content-between">
+                    <input class="stock-${baseProductos[producto].prenda}" id="cant-${baseProductos[producto].idnombre}" type="number" min="1" max="${baseProductos[producto].stock}">
+                    <button id="btn-${baseProductos[producto].idnombre}" class="btn btn-primary">Agregar al carrito</button>
+                    <span class="span-stock" id="span-${baseProductos[producto].idnombre}"></span>
+                </div>
+            `);
+        }
+    }
+});
+/*
 let camisa1 = new Productos('Blue Tribu', 'btribu', 'camisa', 2100, 1, 25, 'assets/blue_tribu.jpg');
 let camisa2 = new Productos('Blue Marley', 'bmarley','camisa', 2500, 2, 30, 'assets/blue_marley.jpg');
 let camisa3 = new Productos('Yellow Submarine', 'ysubmarine', 'camisa', 1950, 3, 25, 'assets/yellow_submarine.jpg');
@@ -53,7 +80,7 @@ baseShorts.push(short1);
 baseShorts.push(short2);
 baseShorts.push(short3);
 baseShorts.push(short4);
-
+*/
 const nombresProductosCarrito = [];
 
 $('#btn-usuario').on('click', function () {
