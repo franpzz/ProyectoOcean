@@ -1,3 +1,4 @@
+// constructuror de clase para los articulos
 class Productos {
     constructor(nombre, idnombre, prenda, precio, id, stock, imagen) {
         this.nombre = nombre,
@@ -13,6 +14,17 @@ class Productos {
     }
 }
 
+// constructor de clase para cada articulo en el carro
+
+class EnCarro {
+    constructor(nombre, imagen, cantidad, precioTotal, idnombre ) {
+        this.nombre = nombre,
+        this.imagen = imagen,
+        this.cantidad = cantidad,
+        this.precioTotal = precioTotal,
+        this.idnombre = idnombre
+    }
+}
 
 // crear estructura principal de seccion productos
 function estructuraProductos () {
@@ -32,7 +44,11 @@ function estructuraProductos () {
         "font-weight": "600",
         "margin-top": "20px"
     });
-    $('#productos').append('<div class="container"><div id="articulos" class="row"></div></div>')
+    $('#productos').append('<div class="container"><div id="articulos" class="row"></div></div>');
+    $('#mainProductos').append('<button id="ver-carrito">Ver Carrito</button>');
+    $('#ver-carrito').click(function () {
+        $('#carrito-container').fadeIn();
+    });
 };
 
 // agregar cada tarjeta de producto
@@ -59,6 +75,7 @@ function listarProductos (base) {
 };
 
 // funcion de los botones de compra
+/*
 function botonesCarrito (base) {
     for (const p in base) {
         $(`#btn-${base[p].idnombre}`).click(function () {
@@ -89,11 +106,74 @@ function botonesCarrito (base) {
         });
     };
 }
+*/
+function botonesCarrito (base) {
+    for (const p in base) {
+        $(`#btn-${base[p].idnombre}`).click(function () {
 
-// crear el container con las tarjetas de productos
+            if($("#span-alert")) {
+                $("#span-alert").remove();
+            }
+            let cantidad = parseInt($(`#cant-${base[p].idnombre}`).val());
+            if(cantidad >= 1) {
+                let precio = $(`#${base[p].idnombre}-price`).text();
+                precio = parseInt(precio.match(d));
+                compraTotal = compraTotal + (precio * cantidad);
 
-const baseProductos = [];
+                if (!enCarrito.find(a => a.nombre == base[p].nombre)){
+                    enCarrito.push(new EnCarro (`${base[p].nombre}`, `${base[p].imagen}`, cantidad, parseInt(`${precio * cantidad}`), `${base[p].idnombre}`));
+                } else {
+                    for (let a of enCarrito) {
+                        if (a.nombre == base[p].nombre) {
+                            a.cantidad = a.cantidad + cantidad;
+                            a.precioTotal = a.precioTotal + (precio * cantidad);
+                        }
+                    }
+                }
+                
+                base[p].venta(cantidad);
+                $(`#cant-${base[p].idnombre}`).val("");
+                $(`#cant-${base[p].idnombre}`).attr("max", base[p].stock);
+                if (base[p].stock < 1) {
+                    $(`#cant-${base[p].idnombre}`).remove();
+                    $(`#btn-${base[p].idnombre}`).remove();
+                    $(`#span-${base[p].idnombre}`).text("Sin Stock!");
+                }
 
+            } else {
+                $(`#compra-${base[p].idnombre}`).append("<span class='span-cant' id='span-alert'>No seleccionaste cantidad</span>");
+            }
+            console.log(compraTotal);
+            $('#carrito').remove();
+            $('#tabla-carro').append('<tbody id="carrito"></tbody>');
+            for (let articulo of enCarrito) {
+                $('#carrito').append(`
+                    <tr id="carro-${articulo.idnombre}">
+                        <td><img style="height: 80px" src="${articulo.imagen}"></td>
+                        <td>x ${articulo.cantidad}</td>
+                        <td>$ ${articulo.precioTotal}</td>
+                        <td><button id="remover-${articulo.idnombre}">Quitar</button></td>
+                    </tr>
+                `);
+                $(`#remover-${articulo.idnombre}`).click(function () {
+                    $(`#carro-${articulo.idnombre}`).remove();
+                    enCarrito = $.grep(enCarrito, (e) => {
+                        return e.idnombre != `${articulo.idnombre}`;
+                    })
+                    compraTotal = compraTotal - `${articulo.precioTotal}`;
+                });
+            }
+        });
+    };
+
+}
+
+// arrays para la base de datos y carrito
+var baseProductos = [];
+/*const nombresProductosCarrito = [];*/
+var enCarrito = [];
+
+// llamada de obtención de los productos de un JSON local
 $.ajax ({
     method: "GET",
     url: "productos.json",
@@ -106,8 +186,7 @@ $.ajax ({
     }
 });
 
-const nombresProductosCarrito = [];
-
+// comprobar si el usuario tiene usuario creado en la pagina
 $('#btn-usuario').on('click', function () {
     let usuarioGuardado = JSON.parse(localStorage.getItem('usuario'));
     if (usuarioGuardado) {
@@ -151,14 +230,5 @@ $("#formulario").on("submit", function (e) {
     console.log(`${datos.children[0].children[0].textContent}: ${datos.children[0].children[1].value}`);
     console.log(`${datos.children[1].children[0].textContent}: ${datos.children[1].children[1].value}`);
 });
-
-$("#ver-carrito").click(() => {
-    $('#carritoContainer').toggle('fast');
-});
-
-
-
-
-
 
 
