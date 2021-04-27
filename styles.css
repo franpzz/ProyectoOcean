@@ -1,11 +1,7 @@
 html {
     font-size: 62.5%;
 }
-/*
-body {
-    background-image: url('assets/fondo-home.jpg');
-}
-*/
+
 .navbar-items {
     width: 50%;
     margin-right: 5%;
@@ -14,6 +10,32 @@ body {
 .navbar-items a {
     font-size: 2.2rem;
     color: gray; 
+}
+
+#carrito-compra {
+    border: 0; 
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-filtro {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 10%;
+    color: white;
+    background-color: #0c84ed;
+    border: 0;
+}
+
+.fila-carro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.btn-filtro:hover {
+    background-color: #006bc7;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #btn-usuario {
@@ -33,6 +55,7 @@ body {
     color: gray;
 }
 
+
 .span-cant {
     font-size: 1.5rem;
     color: red;
@@ -50,26 +73,21 @@ body {
     padding: 0;
 }
 
-.section-title {
-    font-family: 'Parisienne', cursive;
-    text-align: center;
-    font-size: 6rem;
-    border-bottom: 1px solid rgba(0, 0 , 0, 0.2);
-    background: linear-gradient(to right, #bf5d08, #040885 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-
+#filtros {
+    width: 50%;
+    margin: 50px auto;
+}
 
 .item-title {
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {
     .item-img {
-        width: 75%; 
+        width: 75%;
     }
     .item-img:hover {
         transform: scale(1.05);
@@ -78,6 +96,7 @@ body {
 
 .item-img {
     transition: 1s all;
+    height: 250px;
 }
 
 .item-img:hover {

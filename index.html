@@ -27,6 +27,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Principal</a>
                     <a class="nav-link" href="#">Nosotros</a>
                     <a class="nav-link" href="#">Formas de Pago</a>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#carrito-de-compras" id="carrito-compra"><img src="assets/cart.png" alt=""></button>
                 </div>
               </div>
             </div>
@@ -55,13 +56,30 @@
         </div>
         <div id="mainProductos" class="container-fluid">
         </div>
-        <div id="carrito-container" class="container" style="display: none;">
-          <div style="width: 75%">
-              <table id="tabla-carro" border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tbody id="carrito">
-
-                </tbody>
-              </table>
+        <!-- Modal -->
+        <div class="modal fade" id="carrito-de-compras" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="carrito-container" class="container-fluid">
+                  <div style="width: 100%;">
+                      <table id="tabla-carro" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody id="carrito">
+                          
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="vaciar-carro" class="btn btn-danger">Vaciar</button>
+              </div>
+            </div>
           </div>
         </div>
     </main>

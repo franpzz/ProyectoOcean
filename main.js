@@ -44,18 +44,43 @@ function estructuraProductos () {
         "font-weight": "600",
         "margin-top": "20px"
     });
+    $('#productos').append('<div id="filtros" class="d-flex justify-content-around"></div>');
+    $('#filtros').append('<button class="btn-filtro" id="no-filtro">Todo</button>');
+    $('#filtros').append('<button class="btn-filtro" id="filtro-cam">Camisas</button>');
+    $('#filtros').append('<button class="btn-filtro" id="filtro-rem">Remeras</button>');
+    $('#filtros').append('<button class="btn-filtro" id="filtro-sh">Shorts</button>');
     $('#productos').append('<div class="container"><div id="articulos" class="row"></div></div>');
-    $('#mainProductos').append('<button id="ver-carrito">Ver Carrito</button>');
-    $('#ver-carrito').click(function () {
-        $('#carrito-container').fadeIn();
-    });
 };
+
+// funcion para filtrar productos
+function botonesFiltro (idtodo, idcam, idrem, idsh) {
+    $(`#${idtodo}`).click(()=>{
+        $('.camisa').fadeIn();
+        $('.remera').fadeIn();
+        $('.short').fadeIn();
+    });
+    $(`#${idcam}`).click(()=>{
+        $('.camisa').fadeIn();
+        $('.remera').fadeOut();
+        $('.short').fadeOut();
+    });
+    $(`#${idrem}`).click(()=>{
+        $('.camisa').fadeOut();
+        $('.remera').fadeIn();
+        $('.short').fadeOut();
+    });
+    $(`#${idsh}`).click(()=>{
+        $('.camisa').fadeOut();
+        $('.remera').fadeOut();
+        $('.short').fadeIn();
+    });
+}
 
 // agregar cada tarjeta de producto
 function listarProductos (base) {
     for (const p in base) {
         $('#articulos').append(`
-            <div class="col-lg-3 col-sm-12 ${base[p].prenda}">
+            <div class="col-lg-3 col-sm-12 mt-5 ${base[p].prenda}">
                 <div id="compra-${base[p].idnombre}" class="item-card d-flex flex-column align-items-center">
                 </div>
             </div>`
@@ -105,14 +130,14 @@ function actualizarListaCarro (baseCarro, producto, baseProductos, precio, canti
     // crear y actualizar carrito de compras en HTML
 function carroAhtml (baseCarro) {
     $('#carrito').remove();
-    $('#tabla-carro').append('<tbody id="carrito"></tbody>');
+    $('#tabla-carro').append('<tbody id="carrito"><tr style="font-size: 2rem;" class="mt-5 d-flex justify-content-evenly"><td>Total</td><td id="checkout"></td></tr></tbody>');
     for (let articulo of baseCarro) {
-        $('#carrito').append(`
-            <tr id="carro-${articulo.idnombre}">
+        $('#carrito').prepend(`
+            <tr class="fila-carro mt-3" id="carro-${articulo.idnombre}">
                 <td><img style="height: 80px" src="${articulo.imagen}"></td>
                 <td>x ${articulo.cantidad}</td>
                 <td>$ ${articulo.precioTotal}</td>
-                <td><button id="remover-${articulo.idnombre}">Quitar</button></td>
+                <td><button style="border: 0; background-color: red;" id="remover-${articulo.idnombre}"><i class="fas fa-trash-alt"></i></button></td>
             </tr>
         `);
         $(`#remover-${articulo.idnombre}`).click(function () {
@@ -123,6 +148,7 @@ function carroAhtml (baseCarro) {
                 return e.idnombre != `${articulo.idnombre}`;
             })
             compraTotal = compraTotal - `${articulo.precioTotal}`;
+            $('#checkout').text(`$ ${compraTotal}`);
             for (let stock of baseProductos) {
                 if (stock.idnombre == idArticulo) {
                     stock.venta(-cantidadVendida);
@@ -135,7 +161,8 @@ function carroAhtml (baseCarro) {
                 }
             }
         });
-    }
+    };
+    
 }
 
 // funcion de los botones de compra
@@ -181,6 +208,7 @@ function botonesCarrito (base) {
             }
             console.log(compraTotal);
             carroAhtml(enCarrito);
+            $('#checkout').text(`$ ${compraTotal}`);
             /*
             $('#carrito').remove();
             $('#tabla-carro').append('<tbody id="carrito"></tbody>');
@@ -233,13 +261,9 @@ $.ajax ({
     success: (res) => {
         res.map(prod => baseProductos.push(new Productos(prod.nombre, prod.idnombre, prod.prenda, prod.precio, prod.id, prod.stock, prod.imagen)));
         estructuraProductos ();
+        botonesFiltro('no-filtro', 'filtro-cam', 'filtro-rem', 'filtro-sh')
         listarProductos (baseProductos);
         botonesCarrito (baseProductos);
-        $('#mainProductos').append('<button id="esconder">Esconder</button>');
-        $('#esconder').on('click', () => {
-        $('.camisa').hide();
-        console.log('anda');
-    })
     }
 });
 
@@ -270,3 +294,7 @@ $("#formulario").on("submit", function (e) {
     console.log(`${datos.children[0].children[0].textContent}: ${datos.children[0].children[1].value}`);
     console.log(`${datos.children[1].children[0].textContent}: ${datos.children[1].children[1].value}`);
 });
+
+$('#carrito-compra').click(()=>{
+    $('#carrito-container').fadeIn();
+})
