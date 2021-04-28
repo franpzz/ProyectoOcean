@@ -13,7 +13,7 @@ html {
 }
 
 #carrito-compra {
-    border: 0; 
+    border: 0;
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -111,34 +111,6 @@ html {
     font-size: 1.5rem;
 }
 
-#ver-carrito {
-    margin-top: 10px;
-    font-size: 2rem;
-}
-
-#productos-carrito {
-    border: solid 1px rgba(0, 0 , 0, 0.2);
-}
-
-
-#lista-carrito {
-    list-style: none;
-    font-family: 'Parisienne', cursive;
-    font-size: 3rem;
-}
-
-#precio-carrito {
-    font-family: 'Parisienne', cursive;
-    font-size: 4rem;
-    border: solid 1px rgba(0, 0 , 0, 0.2);
-}
-
-.titulo-carrito {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3rem;
-    border-bottom: 1px solid black;
-}
-
 footer {
     background-color: #f5f4dc;
 }
@@ -159,14 +131,4 @@ footer .mapa-footer {
 .icon-link {
     text-decoration: none;
     color: black; 
-}
-
-.muestraCompra {
-    background-color: aquamarine;
-    text-align: center;
-    font-family: 'Parisienne', cursive;
-}
-
-.muestraCompra h3 {
-    font-size: 4rem;
 }
